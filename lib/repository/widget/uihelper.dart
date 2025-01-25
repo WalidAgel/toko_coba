@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Uihelper {
-  static Widget CustomImage({required String img}) {
-    return Image.asset("assets/images/$img");
-  }
+static Widget CustomImage({required String img}) {
+  return Image.asset("assets/images/$img");
+}
 
   static Widget CustomText({
     required String text,

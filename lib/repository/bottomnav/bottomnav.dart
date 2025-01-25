@@ -13,13 +13,13 @@ class Bottomnav extends StatefulWidget {
 }
 
 class _BottomnavState extends State<Bottomnav> {
-  int currentIndex = 0; // Indeks halaman saat ini
+  int currentIndex = 0; 
 
   final List<Widget> pages = [
-    const Homescreen(),
-     Cartscreen(),
-    const Categoryscreen(),
-    const Printscreen(),
+    Homescreen(),
+    Cartscreen(),
+    Categoryscreen(),
+    Printscreen(),
   ];
 
   @override
@@ -27,13 +27,13 @@ class _BottomnavState extends State<Bottomnav> {
     return Scaffold(
       body: IndexedStack(
         index: currentIndex,
-        children: pages, // Menampilkan halaman sesuai `currentIndex`
+        children: pages, 
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
             icon: Uihelper.CustomImage(
-              img: "logoHome.jpg", // Menggunakan path yang sudah valid
+              img: "logoHome.jpg", 
             ),
             label: "Home",
           ),
@@ -58,13 +58,13 @@ class _BottomnavState extends State<Bottomnav> {
         ],
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,
-        selectedItemColor: Colors.blue, // Warna item aktif
-        unselectedItemColor: Colors.grey, // Warna item nonaktif
+        selectedItemColor: Color(0XFF98D8EF), 
+        unselectedItemColor: Colors.black, 
         onTap: (index) {
-          // Debugging untuk memastikan onTap berfungsi
+
           print("Navigasi ke indeks: $index");
           setState(() {
-            currentIndex = index; // Memperbarui indeks halaman
+            currentIndex = index; 
           });
         },
       ),
